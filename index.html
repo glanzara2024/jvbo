@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Jurídica</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo común para todos los inputs */
+        input.custom-input, textarea.custom-input, select.custom-input {
+            border: 2px solid #0d6efd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        input.custom-input:focus, textarea.custom-input:focus, select.custom-input:focus {
+            border-color: #6610f2;
+            box-shadow: 0 0 5px rgba(102, 16, 242, 0.5);
+        }
+        /* Footer fijo */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Estudio Jurídico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario -->
+    <div class="container"> 
+        <!--  mt-5 -->
+        <h1 class="text-center mb-4">Envíanos tu Consulta</h1>
+        <form id="consulta-form">
+            <div class="form-row mb-3">
+                <div class="col">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control custom-input" id="nombre" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div class="col">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control custom-input" id="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control custom-input" id="telefono" placeholder="Ingresa tu número de teléfono">
+                </div>
+                <div class="mb-3">
+                    <label for="consulta" class="form-label">Consulta</label>
+                    <textarea class="form-control custom-input" id="consulta" rows="4" placeholder="Escribe tu consulta aquí" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tipoConsulta" class="form-label">Tipo de Consulta</label>
+                    <select class="form-select custom-input" id="tipoConsulta">
+                        <option value="general">General</option>
+                        <option value="civil">Civil</option>
+                        <option value="penal">Penal</option>
+                        <option value="laboral">Laboral</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Estudio Jurídico - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('consulta-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+            alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto.');
+        });
+    </script>
+</body>
+</html>
